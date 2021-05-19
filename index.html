@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="application-name" content="Coding with Javascript">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="style.css" />
+	<title>Coding with Javascript</title>
+</head>
+<body>
+	<aside>
+		<h1>Coding with Javascript <img id="mascot" src="img/madcat.png" alt="SJHS Coders"></h1>
+		
+		<p>
+		</p>
+	</aside>
+	<main>
+		<article>
+			<header>
+				<h1>Student Game Development</h1>
+				<nav>
+					<div>
+						Jump to:
+					</div>
+					<a href="#jackson">Jackson</a>
+					<a href="#madi">Madi</a>
+					<a href="#kenny">Kenny</a>
+					<a href="#engine">Original Engine</a>
+				</nav>
+				<p>
+					Students began with a simple game engine where you could move a colored block around an HTML canvas maze. Once I opened up the code to them, they were free to experiment in whatever way they wanted. They could investigate by trial-and-error or ask me questions (or, like a pro coder, ask Google). This was no simplified coding exercise either, no drag-and-drop colored blocks; they used real Javascript in real, professional development tools: <a href="https://ide.goorm.io/" target="_blank">Goorm</a> for a cloud-based editor and <a href="https://github.com/" target="_blank">Github</a> for source code control. These are not finished games, but all have playable features and are pretty cool to see.
+				</p>
+				<p>Note: These games are not designed for mobile, as they require a keyboard.</p>
+				<p>Use the arrow keys to move.</p>
+				<p>These are not finished products. If you'd like to restart/reset the games, refresh the page.</p>
+			</header>
+			<section id="jackson">
+				<h2>Jackson</h2>
+				<a href="jackson"><img class="game" src="img/jackson.png" alt="SJHS Coders"></a>
+				<p><a href="jackson">Click to Play</a></p>
+				<p>Jackson added several major and unexpected innovations to the game engine. The map has been expanded to multiple rooms. The rooms are partially randomly generated. There are four enemy types: normal, fast, ninja (it circles you), and exploding (don't get close to it!), each of which has a different AI. He also added a title screen, music (not available on all devices), and a score count.</p>
+				<p>
+					<b>How to play: </b>You are the blue block. Avoid the enemies while trying to pick up the "item" (yellow block). Once you have the item, the enemies will run from you and you have to catch them. Catch all the enemies on a screen to advance to the next room.
+				</p>
+			</section>
+			<section id="madi">
+				<h2>Madi</h2>
+				<a href="madi"><img class="game" src="img/madisgame.png" alt="SJHS Coders"></a>
+				<p><a href="madi">Click to Play</a></p>
+				<p>Madi's unique development was adding a conversation mode. When you encounter another character, the character speaks and you get to choose your reply. You are an orange cat that walks on water. You must meet the panda.</p>
+				<p>
+					<b>How to play: </b>Cross the maze to the panda character. When you contact the panda, a conversation will begin. Select your response with the mouse. Optionally, play music from the bar above the game.
+				</p>
+			</section>
+			<section id="kenny">
+				<h2>Kenny</h2>
+				<a href="kenny"><img class="game" src="img/kenny.png" alt="SJHS Coders"></a>
+				<p><a href="kenny">Click to Play</a></p>
+				<p>Kenny focused on sprite design, map colors, and map layout. Given a little more time, he'd like to introduce enemies, the sprites for which he's already designed. In this game you are the white cat hero. You must pick up the wooden sword to be armed against the (future) enemies.</p>
+				<p>
+					<b>How to play: </b>Cross the maze to collect the wooden sword.	
+				</p>
+			</section>
+			<section id="engine">
+				<h2>Original Engine</h2>
+				<a href="engine"><img class="game" src="img/engine.png" alt="SJHS Coders"></a>
+				<p><a href="engine">Click to Play</a></p>
+				<p>The first thing each student figured out was how to edit the map layout, which is represented in an array that visually reflects the output of the map. By changing a zero to a one, a floor tile becomes a wall and vis-versa.</p>
+				<a href="img/ss-maparray.png" target="_blank"><img src="img/ss-maparray.png" alt="SJHS Coders"></a>
+				<p>The next innovation most students worked on was rendering a tile texture or character sprite instead of a colored block. This is done by replacing an html canvas rectangle with a canvas drawImage method and uploading and linking to an image resource in the project.</p>
+				<a href="img/ss-drawsprite.png" target="_blank"><img src="img/ss-drawsprite.png" alt="SJHS Coders"></a>
+				<p>Beyond that, the students innovated largely on their own, moving into things like items, enemies, map expansion, music, title screen, etc.</p>
+				<a href="img/ss-item.png" target="_blank"><img src="img/ss-item.png" alt="SJHS Coders"></a>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<p>&copy; 2021 by Coding Club.</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

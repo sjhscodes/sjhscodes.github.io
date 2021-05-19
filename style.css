@@ -1,0 +1,72 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Avenir Next', 'Avenir', sans-serif;
+}
+
+main, aside, footer {
+  width:600px;
+  margin:auto;
+  margin-top:2em;
+}
+
+nav {
+	text-align:center;
+	padding-bottom:1em;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	 color: white;
+}
+
+nav div {
+	padding-bottom: 1.5em;
+}
+
+nav a {
+	padding:1em;
+	/*background:white;*/
+	border:1px solid gray;
+	border-radius: .5em;
+}
+
+nav a:hover {
+	background: white;
+	color:#ddd;
+}
+
+aside {
+  background:#aaa;
+  padding:2em;
+}
+
+main {
+  background: #eee;
+  padding:1em 2em 1em 2em;
+}
+
+section img {
+	max-width:100%;	
+}
+
+section img.game {
+	width: 400px;
+}
+
+section img.game:hover {
+	opacity: 50%;
+}
+
+footer {
+  background: #333;
+  padding:1em 2em 1em 2em;
+  color:white;
+}
+
+#mascot {
+	width: 96px;
+}

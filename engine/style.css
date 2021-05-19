@@ -1,0 +1,27 @@
+body {
+  margin:0;
+  padding:0;
+  font-family: serif;
+}
+
+main, aside, footer, details {
+  width:600px;
+  margin:auto;
+  margin-top:2em;
+}
+
+aside {
+  background:#aaa;
+  padding:2em;
+}
+
+main {
+  background: #eee;
+  padding:1em 2em 1em 2em;
+}
+
+footer {
+  background: #333;
+  padding:1em 2em 1em 2em;
+  color:white;
+}
