@@ -14,7 +14,7 @@ function Game() {
 	canvas.height = 48*12;
 	
 	var field = [
-	[1,1,1,1,1,1,1,1,1,1,1,1],
+	[1,0,1,1,1,1,1,1,1,1,1,1],
 	[1,0,1,1,1,0,1,0,0,0,0,1],
 	[1,0,0,0,1,0,1,0,1,1,1,1],
 	[1,1,1,0,1,0,1,0,0,0,0,1],
@@ -27,23 +27,16 @@ function Game() {
 	[1,0,0,0,0,0,0,1,0,0,0,1],
 	[1,1,1,1,1,1,1,1,1,1,1,1]
 	];
-	var itemSprite = document.getElementById("item");
-	var cat = document.getElementById("cat");
-	var redcat = document.getElementById("redcat");
-	var bluecat = document.getElementById("bluecat");
-	var cyancat = document.getElementById("cyancat");
-	var yellowcat = document.getElementById("yellowcat");
-	var pinkcat = document.getElementById("pinkcat");
-	var ninjacat = document.getElementById("ninjacat");
-	var wcat = document.getElementById("wcat");
-	var brownsword = document.getElementById("brownsword");
 	var blueswords = document.getElementById("blueswords");
 	var whitecat = document.getElementById("whitecat");
 	var whitesword = document.getElementById("whitesword");
 	var brownsword = document.getElementById("brownsword");
 	var browncat = document.getElementById("browncat");
+	var dino = document.getElementById("dino");
+	var door = document.getElementById("door");
 	var cats = whitecat;
 	var weapon = brownsword;
+	var evil = dino;
 	
 	function Sprite() {
 		
@@ -52,6 +45,30 @@ function Game() {
 		
 		this.draw = function() {
 			ctx.drawImage(cats,this.x*tileWidth,this.y*tileHeight,tileWidth,tileHeight);
+			//ctx.fillStyle = 'blue';
+			//ctx.fillRect(this.x*tileWidth,this.y*tileHeight,tileWidth,tileHeight);
+		};
+	}
+	
+	function bad_guy() {
+		
+		this.x = 5;
+		this.y = 1;
+		
+		this.draw = function() {
+			ctx.drawImage(evil,this.x*tileWidth,this.y*tileHeight,tileWidth,tileHeight);
+			//ctx.fillStyle = 'blue';
+			//ctx.fillRect(this.x*tileWidth,this.y*tileHeight,tileWidth,tileHeight);
+		};
+	}
+	
+	function use_door() {
+		
+		this.x = 0;
+		this.y = 1;
+		
+		this.draw = function() {
+			ctx.drawImage(door,this.x*tileWidth,this.y*tileHeight,tileWidth,tileHeight);
 			//ctx.fillStyle = 'blue';
 			//ctx.fillRect(this.x*tileWidth,this.y*tileHeight,tileWidth,tileHeight);
 		};
@@ -72,7 +89,7 @@ function Game() {
 		};
 		
 		this.pickUp = function() {
-			
+			cats = browncat
 		};
 		
 		this.remove = function() {
@@ -107,6 +124,8 @@ function Game() {
 			_.draw();
 			hero.draw();
 			item.draw();
+			//bad_guy.draw();
+			//use_door.draw();
 			_.animate();
 		},
 		animate: function() {
